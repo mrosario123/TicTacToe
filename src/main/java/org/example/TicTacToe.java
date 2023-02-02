@@ -17,12 +17,14 @@ public class TicTacToe {
             System.out.println("Player " + currentPlayer + ", enter column (0-2):");
             int column = scanner.nextInt();
 
+
             if(board[row][column] == ' '){
                 board[row][column] = currentPlayer;
+                printBoard(board);
 
                 if(checkWin(board, currentPlayer)){
                     printBoard(board);
-                    System.out.println("Player " + currentPlayer + "wins");
+                    System.out.println("Player " + currentPlayer + " wins");
                     gameOver = true;
                 }else{
 
